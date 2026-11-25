@@ -69,7 +69,7 @@ struct SingleList {
         size++;
     }
 
-    // Добавление ПОСЛЕ элемента с индексом k
+    // Добавление после элемента с индексом k
     void insertAfter(int k, int value) {
         SingleNode* left = getAt(k);                 // узел, после которого вставляем
         if (left == nullptr) return;                 // индекс введён неверно - выход
@@ -90,7 +90,7 @@ struct SingleList {
         }
     }
 
-    // Добавление ПЕРЕД элементом с индексом k
+    // Добавление перед элементом с индексом k
     void insertBefore(int k, int value) {
         if (k < 0 || k >= size) return;              // элемента с индексом k нет
         insertAt(k, value);                          // новый узел встанет на место k, старый сдвинется вправо

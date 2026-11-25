@@ -40,7 +40,7 @@ struct DoubleList {
         clear();
     }
 
-    // Доступ к элементу по индексу. Идём от ближайшего края: от головы или от хвоста
+    // Доступ к элементу по индексу. Oт головы или от хвоста
     DoubleNode* getAt(int k) {
         if (k < 0 || k >= size) return nullptr;
         DoubleNode* temp;
@@ -80,7 +80,7 @@ struct DoubleList {
         size++;
     }
 
-    // Добавление ПОСЛЕ элемента с индексом k
+    // Добавление после элемента с индексом k
     void insertAfter(int k, int value) {
         DoubleNode* current = getAt(k);
         if (current == nullptr) return;              // индекс введён неверно - выход
@@ -96,7 +96,7 @@ struct DoubleList {
         size++;
     }
 
-    // Добавление ПЕРЕД элементом с индексом k (здесь помогает указатель prev)
+    // Добавление перед элементом с индексом k (здесь помогает указатель prev)
     void insertBefore(int k, int value) {
         DoubleNode* current = getAt(k);
         if (current == nullptr) return;
@@ -182,7 +182,7 @@ struct DoubleList {
         }
     }
 
-    // Сортировка вставками (по возрастанию или по убыванию)
+    // Сортировка вставками
     void insertionSort(bool ascending) {
         DoubleNode* sorted = nullptr;                // начало нового, отсортированного списка
         DoubleNode* current = head;
